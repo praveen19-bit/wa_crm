@@ -96,6 +96,24 @@
         if (conv && window.CRM.contacts) window.CRM.contacts.openEditor(conv.contact);
       });
 
+      // ----- mobile navigation -----
+      const inboxList = document.querySelector(".inbox-list");
+      const detailsPanel = $("#inbox-details");
+      const setListOpen = (open) => inboxList.classList.toggle("open", open);
+
+      const showListBtn = $("#btn-show-list");
+      if (showListBtn) showListBtn.addEventListener("click", () => setListOpen(true));
+
+      $("#conv-list-close").addEventListener("click", () => setListOpen(false));
+      $("#btn-back-list").addEventListener("click", () => setListOpen(true));
+
+      $("#btn-toggle-details").addEventListener("click", () => {
+        detailsPanel.hidden = false;
+        detailsPanel.classList.toggle("open");
+      });
+
+      $("#details-close").addEventListener("click", () => detailsPanel.classList.remove("open"));
+
       // ----- media upload -----
       const fileInput = $("#file-input");
       fileInput.addEventListener("change", async () => {
@@ -227,6 +245,10 @@
       }
 
       this.renderList();
+      const inboxList = document.querySelector(".inbox-list");
+      if (inboxList) inboxList.classList.remove("open");
+      const detailsPanel = $("#inbox-details");
+      if (detailsPanel) detailsPanel.classList.remove("open");
       await this.loadMessages(id);
       api.markRead(id).catch(() => {});
 

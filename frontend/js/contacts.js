@@ -106,10 +106,16 @@
           tdContact.appendChild(cell);
           tr.appendChild(tdContact);
 
-          tr.appendChild(textTd(escapeHtml(c.phone || "—")));
-          tr.appendChild(textTd(escapeHtml(c.company || "—")));
+          const tdPhone = textTd(escapeHtml(c.phone || "—"));
+          tdPhone.dataset.label = "Phone";
+          tr.appendChild(tdPhone);
+
+          const tdCompany = textTd(escapeHtml(c.company || "—"));
+          tdCompany.dataset.label = "Company";
+          tr.appendChild(tdCompany);
 
           const tdTags = document.createElement("td");
+          tdTags.dataset.label = "Tags";
           (c.tags || []).forEach((t) => {
             const pill = document.createElement("span");
             pill.className = "tag-mini";
@@ -120,10 +126,16 @@
           if (!(c.tags || []).length) tdTags.textContent = "—";
           tr.appendChild(tdTags);
 
-          tr.appendChild(textTd(escapeHtml(c.last_message_preview || "—")));
-          tr.appendChild(textTd(escapeHtml(fmtDate(c.created_at))));
+          const tdLast = textTd(escapeHtml(c.last_message_preview || "—"));
+          tdLast.dataset.label = "Last message";
+          tr.appendChild(tdLast);
+
+          const tdAdded = textTd(escapeHtml(fmtDate(c.created_at)));
+          tdAdded.dataset.label = "Added";
+          tr.appendChild(tdAdded);
 
           const tdAct = document.createElement("td");
+          tdAct.dataset.label = "Manage";
           const actions = document.createElement("div");
           actions.className = "row-actions";
           const editBtn = mkIconBtn("✏️", "Edit");

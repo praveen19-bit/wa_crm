@@ -56,6 +56,7 @@
             <div class="inbox-list-head">
               <input type="search" class="search-input" id="conv-search" placeholder="Search conversations…" />
               <button class="icon-btn" id="conv-filter-unread" title="Filter unread">🔔</button>
+              <button class="icon-btn mobile-only" id="conv-list-close" title="Close list">✕</button>
             </div>
             <div class="conv-list" id="conv-list"></div>
           </div>
@@ -67,16 +68,19 @@
               <h2>Welcome to your inbox</h2>
               <p>Incoming WhatsApp replies land here in real time.<br />Start a new conversation or wait for a reply.</p>
               <button class="btn btn-primary chat-empty-cta" id="btn-start-conv">＋ New conversation</button>
+              <button class="btn btn-ghost mobile-only" id="btn-show-list">☰ Conversations</button>
             </div>
 
             <div class="chat-window" id="chat-window" hidden>
               <header class="chat-head">
+                <button class="icon-btn mobile-only" id="btn-back-list" title="Back to conversations">☰</button>
                 <div class="avatar" id="chat-avatar">?</div>
                 <div class="chat-head-meta">
                   <span class="chat-title" id="chat-title">Contact</span>
                   <span class="chat-sub" id="chat-sub">—</span>
                 </div>
                 <div class="chat-actions">
+                  <button class="icon-btn tablet-only" id="btn-toggle-details" title="Contact details">ℹ️</button>
                   <button class="icon-btn" id="btn-archive" title="Archive">🗂️</button>
                   <button class="icon-btn" id="btn-open-contact" title="Edit contact">✏️</button>
                 </div>
@@ -105,6 +109,10 @@
 
           <!-- right: details -->
           <div class="inbox-details" id="inbox-details" hidden>
+            <div class="details-head tablet-only">
+              <span class="details-title">Contact info</span>
+              <button class="icon-btn" id="details-close" title="Close">✕</button>
+            </div>
             <div class="details-body" id="details-body"></div>
           </div>
         </div>
