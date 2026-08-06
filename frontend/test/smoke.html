@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Smoke test</title>
+</head>
+<body>
+  <h1>Smoke test</h1>
+  <pre id="out">running…</pre>
+  <script>
+    (async () => {
+      const out = [];
+      const log = (name, ok, detail) => {
+        out.push((ok ? "PASS " : "FAIL ") + name + (detail ? " :: " + detail : ""));
+      };
+      const BASE = "http://127.0.0.1:8000";
+      try {
+        const health = await (await fetch(BASE + "/health")).json();
+        log("health", health.status === "ok");
+
+        const email = "smoke" + Date.now() + "@test.com";
+        const reg = await fetch(BASE + "/api/auth/register", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, name: "Smoke Test", password: "password123" }),
+        });
+        const regJson = await reg.json();
+        log("register", reg.ok && !!regJson.access_token);
+
+        const headers = { Authorization: "Bearer " + regJson.access_token };
+
+        const tag = await fetch(BASE + "/api/tags", {
+          method: "POST",
+          headers: Object.assign({ "Content-Type": "application/json" }, headers),
+          body: JSON.stringify({ name: "Smoke", color: "#f43f5e" }),
+        }).then((r) => r.json());
+
+        const contact = await fetch(BASE + "/api/contacts", {
+          method: "POST",
+          headers: Object.assign({ "Content-Type": "application/json" }, headers),
+          body: JSON.stringify({ name: "Smoke Person", phone: "1555123" + Math.floor(1000 + Math.random() * 9000) }),
+        }).then((r) => r.json());
+        log("create contact", !!contact.id);
+
+        const conv = await fetch(BASE + "/api/conversations?contact_id=" + contact.id, {
+          method: "POST",
+          headers,
+        }).then((r) => r.json());
+        log("create conversation", !!conv.id);
+
+        const convs = await fetch(BASE + "/api/conversations", { headers }).then((r) => r.json());
+        log("list conversations", Array.isArray(convs) && convs.length >= 1);
+
+        const analytics = await fetch(BASE + "/api/analytics?days=7", { headers }).then((r) => r.json());
+        log("analytics", analytics.overview.total_contacts >= 1);
+
+        const settings = await fetch(BASE + "/api/settings", { headers }).then((r) => r.json());
+        log("settings", settings.webhook_configured === false);
+
+        // cleanup
+        await fetch(BASE + "/api/contacts/" + contact.id, { method: "DELETE", headers });
+        log("delete contact", true);
+      } catch (e) {
+        log("exception", false, e.message);
+      }
+      document.getElementById("out").textContent = out.join("\n");
+    })();
+  </script>
+</body>
+</html>

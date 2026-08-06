@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp CRM</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-badge">💬</div>
+        <span class="brand-name">WhatsApp CRM</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="inbox">
+          <span class="nav-ico">💬</span><span class="nav-label">Inbox</span>
+          <span class="nav-badge" id="nav-unread" hidden>0</span>
+        </button>
+        <button class="nav-item" data-view="contacts">
+          <span class="nav-ico">👥</span><span class="nav-label">Contacts</span>
+        </button>
+        <button class="nav-item" data-view="analytics">
+          <span class="nav-ico">📊</span><span class="nav-label">Analytics</span>
+        </button>
+        <button class="nav-item" data-view="settings">
+          <span class="nav-ico">⚙️</span><span class="nav-label">Settings</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+          <span class="theme-ico">🌙</span>
+        </button>
+        <div class="user-chip">
+          <div class="avatar" id="user-avatar">U</div>
+          <div class="user-meta">
+            <span class="user-name" id="user-name">User</span>
+            <button class="logout-link" id="logout-btn">Sign out</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===================== MAIN ===================== -->
+    <main class="main">
+      <!-- ============ INBOX ============ -->
+      <section id="view-inbox" class="view active">
+        <div class="inbox">
+          <!-- left: conversation list -->
+          <div class="inbox-list">
+            <div class="inbox-list-head">
+              <input type="search" class="search-input" id="conv-search" placeholder="Search conversations…" />
+              <button class="icon-btn" id="conv-filter-unread" title="Filter unread">🔔</button>
+            </div>
+            <div class="conv-list" id="conv-list"></div>
+          </div>
+
+          <!-- center: chat -->
+          <div class="inbox-chat" id="inbox-chat">
+            <div class="chat-empty" id="chat-empty">
+              <div class="chat-empty-ico">💬</div>
+              <h2>Welcome to your inbox</h2>
+              <p>Incoming WhatsApp replies land here in real time.<br />Start a new conversation or wait for a reply.</p>
+              <button class="btn btn-primary chat-empty-cta" id="btn-start-conv">＋ New conversation</button>
+            </div>
+
+            <div class="chat-window" id="chat-window" hidden>
+              <header class="chat-head">
+                <div class="avatar" id="chat-avatar">?</div>
+                <div class="chat-head-meta">
+                  <span class="chat-title" id="chat-title">Contact</span>
+                  <span class="chat-sub" id="chat-sub">—</span>
+                </div>
+                <div class="chat-actions">
+                  <button class="icon-btn" id="btn-archive" title="Archive">🗂️</button>
+                  <button class="icon-btn" id="btn-open-contact" title="Edit contact">✏️</button>
+                </div>
+              </header>
+
+              <div class="chat-body" id="chat-body"></div>
+
+              <footer class="chat-compose">
+                <div class="emoji-picker" id="emoji-picker" hidden></div>
+                <div class="compose-row">
+                  <button class="icon-btn" id="btn-emoji" title="Emoji">😊</button>
+                  <label class="icon-btn" for="file-input" title="Attach file">📎</label>
+                  <input type="file" id="file-input" hidden multiple />
+                  <div class="compose-input-wrap">
+                    <input type="text" id="compose-input" class="compose-input" placeholder="Type a message…" autocomplete="off" />
+                  </div>
+                  <button class="btn btn-send" id="btn-send" title="Send">➤</button>
+                </div>
+                <div class="upload-progress" id="upload-progress" hidden>
+                  <span id="upload-label">Uploading…</span>
+                  <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+                </div>
+              </footer>
+            </div>
+          </div>
+
+          <!-- right: details -->
+          <div class="inbox-details" id="inbox-details" hidden>
+            <div class="details-body" id="details-body"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACTS ============ -->
+      <section id="view-contacts" class="view">
+        <div class="page-head">
+          <div>
+            <h1>Contacts</h1>
+            <p class="page-sub" id="contacts-sub">Manage your prospects</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn btn-ghost" id="btn-export-csv">⬇️ Export CSV</button>
+            <label class="btn btn-ghost" for="csv-import">⬆️ Import CSV</label>
+            <input type="file" id="csv-import" accept=".csv" hidden />
+            <button class="btn btn-primary" id="btn-add-contact">＋ Add contact</button>
+          </div>
+        </div>
+
+        <div class="filter-bar glass">
+          <input type="search" class="search-input" id="contact-search" placeholder="Search by name, phone, email…" />
+          <select id="contact-tag-filter" class="select-input">
+            <option value="">All tags</option>
+          </select>
+        </div>
+
+        <div class="table-card glass">
+          <table class="table" id="contacts-table">
+            <thead>
+              <tr>
+                <th>Contact</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Tags</th>
+                <th>Last message</th>
+                <th>Added</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="contacts-body"></tbody>
+          </table>
+          <div class="table-empty" id="contacts-empty" hidden>
+            <p>No contacts yet. Import a CSV or wait for incoming replies.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ANALYTICS ============ -->
+      <section id="view-analytics" class="view">
+        <div class="page-head">
+          <div>
+            <h1>Analytics</h1>
+            <p class="page-sub">Performance of your outreach</p>
+          </div>
+          <select id="analytics-range" class="select-input">
+            <option value="7">Last 7 days</option>
+            <option value="30" selected>Last 30 days</option>
+            <option value="90">Last 90 days</option>
+          </select>
+        </div>
+
+        <div class="stats-grid" id="analytics-cards"></div>
+        <div class="chart-row">
+          <div class="chart-card glass">
+            <h3>Daily messages</h3>
+            <canvas id="chart-daily"></canvas>
+          </div>
+          <div class="chart-card glass">
+            <h3>Message mix</h3>
+            <canvas id="chart-mix"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SETTINGS ============ -->
+      <section id="view-settings" class="view">
+        <div class="page-head">
+          <div>
+            <h1>Settings</h1>
+            <p class="page-sub">WhatsApp Cloud API &amp; workspace configuration</p>
+          </div>
+        </div>
+
+        <div class="settings-grid">
+          <div class="settings-card glass">
+            <h3>WhatsApp Cloud API</h3>
+            <div class="field">
+              <label for="set-token">Access token</label>
+              <input id="set-token" type="password" placeholder="EAAG…" autocomplete="off" />
+              <small class="hint">System user token with whatsapp_business_messaging scope.</small>
+            </div>
+            <div class="field">
+              <label for="set-pnid">Phone number ID</label>
+              <input id="set-pnid" type="text" placeholder="e.g. 123456789012345" />
+            </div>
+            <div class="field">
+              <label for="set-waba">Business account ID (optional)</label>
+              <input id="set-waba" type="text" placeholder="e.g. 100000000000000" />
+            </div>
+            <div class="field">
+              <label for="set-bname">Business name</label>
+              <input id="set-bname" type="text" placeholder="Acme Support" />
+            </div>
+            <div class="field">
+              <label for="set-verify">Webhook verify token</label>
+              <input id="set-verify" type="text" placeholder="a-secret-string" />
+            </div>
+            <div class="btn-row">
+              <button class="btn btn-primary" id="btn-save-settings">Save settings</button>
+              <button class="btn btn-ghost" id="btn-test-connection">Test connection</button>
+            </div>
+          </div>
+
+          <div class="settings-card glass">
+            <h3>Webhook setup</h3>
+            <p class="hint">Point Meta to this URL to receive incoming messages.</p>
+            <div class="field">
+              <label>Webhook URL</label>
+              <code class="webhook-url" id="webhook-url">—</code>
+              <button class="btn btn-ghost btn-sm" id="btn-copy-webhook">Copy</button>
+            </div>
+            <ol class="steps">
+              <li>Open Meta Developer <b>WhatsApp</b> → <b>Configuration</b>.</li>
+              <li>Paste the URL above and the verify token.</li>
+              <li>Subscribe to the <code>messages</code> webhook field.</li>
+              <li>Send yourself a test message — it will appear in the inbox.</li>
+            </ol>
+          </div>
+
+          <div class="settings-card glass">
+            <h3>Auto-reply</h3>
+            <label class="switch-row">
+              <input type="checkbox" id="set-autoreply" />
+              <span class="switch"></span>
+              <span>Send automatic reply when a lead messages first</span>
+            </label>
+            <div class="field">
+              <label for="set-autoreply-text">Reply text</label>
+              <textarea id="set-autoreply-text" rows="3" placeholder="Thanks for reaching out! A teammate will reply shortly."></textarea>
+            </div>
+          </div>
+
+          <div class="settings-card glass">
+            <h3>Workspace</h3>
+            <div class="field">
+              <label for="set-account-name">Your name</label>
+              <input id="set-account-name" type="text" />
+            </div>
+            <button class="btn btn-ghost" id="btn-save-account">Update name</button>
+            <hr />
+            <button class="btn btn-danger" id="btn-change-password">Change password</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ===================== MODALS ===================== -->
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal glass" id="modal">
+      <div class="modal-head">
+        <h3 id="modal-title">Title</h3>
+        <button class="icon-btn" id="modal-close">✕</button>
+      </div>
+      <div class="modal-body" id="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="toast-stack"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/websocket.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/inbox.js"></script>
+  <script src="js/contacts.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>

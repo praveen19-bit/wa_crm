@@ -1,0 +1,879 @@
+::ffff:127.0.0.1 - - [05/Aug/2026 19:20:56] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:21:32] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:22:23] "GET /test/smoke.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:22:23] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:22:23] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:39] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:40] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:40] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:41] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:23:41] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:28:07] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:28:07] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:28:07] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:28:07] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:27] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:27] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:27] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:27] "GET /js/auth.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:42] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:56] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:29:57] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:26] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/auth.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:30:56] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:13] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:49] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:49] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:49] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:58] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:59] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:59] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:32:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:33:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:16] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:17] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:34:17] "GET /app.html HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 50737, 0, 0)
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 53013, 0, 0)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+----------------------------------------
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:16] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:16] "GET /somke.html HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:16] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:16] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET / HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/auth.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:35:27] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:06] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:06] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:07] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:07] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:07] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:36:58] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:09] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:10] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:37:10] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:47] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:47] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:47] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:47] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:39:49] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:13] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:13] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:13] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:13] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:16] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:40:59] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:00] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:01] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:01] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:01] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:01] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:02] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:02] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:02] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:02] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:03] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:03] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:04] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:12] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:12] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:12] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:12] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:41:15] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:42:10] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:42:10] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:42:11] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:42:11] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:42:11] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:38] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:38] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:38] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:38] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:43:40] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:15] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:15] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:15] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:15] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:18] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:39] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:40] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:41] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:41] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:42] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:42] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:42] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:42] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:42] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:43] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:43] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:43] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:43] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:54] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:55] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:55] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:55] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:45:58] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:22] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:22] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:22] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:22] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:25] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:54] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:55] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:56] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:56] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:56] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:57] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:46:58] "GET /js/settings.js HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 54106, 0, 0)
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 51642, 0, 0)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+----------------------------------------
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:38] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:39] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:39] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:47:39] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:23] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:28] "GET / HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:28] "GET /js/auth.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:48:28] "GET /js/settings.js HTTP/1.1" 304 -
+::1 - - [05/Aug/2026 19:48:49] "GET / HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:48:49] "GET /css/styles.css HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:48:49] "GET /js/api.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:48:49] "GET /js/auth.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /app.html HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/utils.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/app.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/websocket.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/inbox.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/contacts.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/analytics.js HTTP/1.1" 200 -
+::1 - - [05/Aug/2026 19:49:02] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:20] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:23] "GET / HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:23] "GET /js/auth.js HTTP/1.1" 304 -
+::1 - - [05/Aug/2026 19:49:33] "GET /css/styles.css HTTP/1.1" 304 -
+::1 - - [05/Aug/2026 19:49:33] "GET /js/app.js HTTP/1.1" 304 -
+::1 - - [05/Aug/2026 19:49:33] "GET /js/settings.js HTTP/1.1" 304 -
+::1 - - [05/Aug/2026 19:49:39] code 404, message File not found
+::1 - - [05/Aug/2026 19:49:39] "GET /login.html HTTP/1.1" 404 -
+::1 - - [05/Aug/2026 19:49:39] code 404, message File not found
+::1 - - [05/Aug/2026 19:49:39] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:59] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:49:59] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:50:05] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 19:50:05] "GET /login HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:08] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:09] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:38] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:38] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:51:38] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:27] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:27] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:27] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:27] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:52:52] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:55:35] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:07] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:07] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:07] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:07] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:56:10] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:26] "GET /index.html. HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:32] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:32] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:32] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:32] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 19:57:49] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:15] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:15] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:15] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:15] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:18] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:38] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:39] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:39] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:39] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:39] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:00:41] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 20:02:19] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:11:40] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:19] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:29] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:29] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:29] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:29] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:15:32] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:23] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:23] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:23] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:55] "GET /register.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:55] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:55] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:55] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:20:58] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:27] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:28] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:28] "GET /app.html HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 62349, 0, 0)
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 49672, 0, 0)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+----------------------------------------
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:54] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:56] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:21:56] "GET /app.html HTTP/1.1" 200 -
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 49213, 0, 0)
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 55681, 0, 0)
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+----------------------------------------
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:22:34] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 21:29:32] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:37] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:39] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:39] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:01:59] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:02:00] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:02:00] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:03:59] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:09] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:10] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:10] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:11] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:11] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:25] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:26] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:27] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:15:27] "GET /app.html HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 54604, 0, 0)
+----------------------------------------
+Traceback (most recent call last):
+Exception occurred during processing of request from ('::ffff:127.0.0.1', 60243, 0, 0)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+Traceback (most recent call last):
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 1294, in finish_request
+    self.RequestHandlerClass(request, client_address, self,
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 658, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 747, in __init__
+    self.handle()
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 432, in handle
+    self.handle_one_request()
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\http\server.py", line 400, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "C:\Users\mp360\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+----------------------------------------
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+----------------------------------------
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:58] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:59] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:59] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:59] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:16:59] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:17:00] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:17:00] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:18:02] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:18:02] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:18:02] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:18:02] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [05/Aug/2026 22:18:02] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:34] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:34] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:34] "GET /css/styles.css HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:34] "GET /js/auth.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:34] "GET /js/api.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /app.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/utils.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/websocket.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/app.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/contacts.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/analytics.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/settings.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:08:51] "GET /js/inbox.js HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /app.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/config.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/api.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/utils.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/websocket.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/app.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /css/styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/settings.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/contacts.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/analytics.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/inbox.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /index.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:22] "GET /js/auth.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:23] "GET /index.html HTTP/1.1" 304 -
+::ffff:127.0.0.1 - - [06/Aug/2026 07:20:23] "GET /app.html HTTP/1.1" 200 -

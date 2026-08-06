@@ -1,0 +1,25 @@
+{$APP_DOMAIN} {
+	# Compress static assets and API responses.
+	encode zstd gzip
+
+	# API backend (also handles WebSocket upgrades automatically).
+	handle /api/* {
+		reverse_proxy backend:8000
+	}
+
+	# Realtime WebSocket endpoint.
+	handle /ws* {
+		reverse_proxy backend:8000
+	}
+
+	# Health check (handy for uptime monitors).
+	handle /health {
+		reverse_proxy backend:8000
+	}
+
+	# Everything else is static frontend.
+	handle {
+		root * /srv/frontend
+		file_server
+	}
+}

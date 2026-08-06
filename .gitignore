@@ -1,0 +1,32 @@
+# Secrets / env files
+.env
+backend/.env
+deploy/.env
+deploy/backend.env
+
+# Local data & state
+backend/dev.db
+*.pid
+backend/media_storage/
+media_storage/
+
+# Scratch test artifacts (API ids, tokens)
+contact_id.txt
+conv_id.txt
+media_id.txt
+tag_id.txt
+token.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / frontend
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
