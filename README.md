@@ -35,7 +35,7 @@ When you run outreach with n8n (or any automation) through your WhatsApp Busines
 | Realtime  | WebSockets                                              |
 | Frontend  | HTML5 · CSS3 · Vanilla JS (no framework)                |
 | WhatsApp  | Meta WhatsApp Cloud API (Graph API)                     |
-| Deploy    | Backend: Render · Frontend: Vercel                      |
+| Deploy    | Render (one service: API + frontend)                    |
 
 ---
 
@@ -59,15 +59,13 @@ When you run outreach with n8n (or any automation) through your WhatsApp Busines
 │   ├── supabase/schema.sql      # Postgres schema + RLS + storage bucket
 │   ├── requirements.txt
 │   ├── .env.example
-│   ├── Dockerfile
-│   └── render.yaml
+│   └── Dockerfile
 └── frontend/
     ├── index.html  register.html  app.html
     ├── css/styles.css
     ├── js/  api.js utils.js websocket.js app.js
     │         inbox.js contacts.js analytics.js settings.js
-    ├── test/                    # headless browser + realtime smoke tests
-    └── vercel.json
+    └── test/                    # headless browser + realtime smoke tests
 ```
 
 ---
@@ -257,23 +255,17 @@ SUPABASE_BUCKET=whatsapp-media
 
 ## Deployment
 
-### Backend → Render
-1. Push the repo, create a **Web Service** in Render.
-2. Use `render.yaml` (import from the dashboard) or set manually:
-   - Build: `pip install -r requirements.txt`
-   - Start: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-3. Set env vars (see `.env.example`): `SECRET_KEY`, `DATABASE_URL`, `SUPABASE_URL`, `SUPABASE_SERVICE_KEY`, `CORS_ORIGINS`.
-4. Point Meta's webhook at `https://<your-service>.onrender.com/api/webhook/whatsapp`.
+### Render (one service — API + frontend)
+1. Push the repo, then **New + → Blueprint** in Render and connect this repo.
+   `render.yaml` at the repo root provisions the `whatsapp-crm` service
+   (build: `pip install -r backend/requirements.txt`, start:
+   `cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT`).
+2. In the service's **Environment** tab set the secrets: `DATABASE_URL`,
+   `SUPABASE_URL`, `SUPABASE_SERVICE_KEY`, `CORS_ORIGINS` (and a long
+   `SECRET_KEY`; `render.yaml` can generate it for you).
+3. Point Meta's webhook at `https://<your-service>.onrender.com/api/webhook/whatsapp`.
 
 > ⚠️ **WebSocket note:** if you put a proxy/CDN in front of the backend, enable WebSocket support. Render passes them through natively.
-
-### Frontend → Vercel
-1. Import the `frontend/` folder as a **static** Vercel project.
-2. Point the frontend at your backend:
-   ```js
-   localStorage.setItem("crm_api_base", "https://<your-service>.onrender.com")
-   ```
-3. Add `https://<your-app>.vercel.app` to the backend's `CORS_ORIGINS`.
 
 ---
 
