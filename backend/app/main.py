@@ -1,4 +1,5 @@
 """FastAPI application entrypoint."""
+import asyncio
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -8,11 +9,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .api import analytics, auth, contacts, conversations, media, messages, settings as settings_api, tags, webhook
+from .api import analytics, auth, campaigns, contacts, conversations, media, messages, settings as settings_api, tags, webhook
 from .config import settings
 from .core.security import decode_token
 from .core.websocket_manager import manager
 from .database import AsyncSessionLocal, init_db
+from .services import queue_worker
 
 logging.basicConfig(
     level=logging.INFO,
@@ -27,7 +29,13 @@ async def lifespan(app: FastAPI):
         await init_db()
         logger.info("Database initialized (non-production mode)")
     logger.info("%s started in %s environment", settings.app_name, settings.environment)
+    worker_task = asyncio.create_task(queue_worker.run_worker())
     yield
+    worker_task.cancel()
+    try:
+        await worker_task
+    except asyncio.CancelledError:
+        pass
 
 
 app = FastAPI(
@@ -54,6 +62,7 @@ app.include_router(messages.router, prefix=settings.api_prefix)
 app.include_router(media.router, prefix=settings.api_prefix)
 app.include_router(analytics.router, prefix=settings.api_prefix)
 app.include_router(settings_api.router, prefix=settings.api_prefix)
+app.include_router(campaigns.router, prefix=settings.api_prefix)
 app.include_router(webhook.router, prefix=settings.api_prefix)
 
 # ---------------------------------------------------------------- health

@@ -15,13 +15,16 @@ from sqlalchemy import delete, func, select, update
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..core.whatsapp import WhatsAppClient, WhatsAppError, resolve_whatsapp_client
+from ..core.websocket_manager import manager as ws_manager
 from ..database import AsyncSessionLocal
 from ..models.campaign import Campaign
 from ..models.campaign_contact import CampaignContact
 from ..models.campaign_log import CampaignLog
 from ..models.campaign_message import CampaignMessage
 from ..models.campaign_queue import CampaignQueue
+from ..models.media import MediaFile
 from ..models.setting import Setting
+from .campaigns import tag_contact_after_send
 from .leads import is_blacklisted, normalize_phone, render_template
 
 logger = logging.getLogger(__name__)
@@ -139,6 +142,12 @@ async def _record_message(db: AsyncSession, campaign: Campaign, contact: Campaig
 
 
 # ---------------------------------------------------------------- scheduling
+async def _emit(db: AsyncSession, campaign: Campaign, event: str, payload: dict) -> None:
+    """Push a live event to all of the campaign owner's connected browsers."""
+    payload["campaign_id"] = campaign.id
+    await ws_manager.send_to_user(campaign.user_id, event, payload)
+
+
 async def _count_sent_today(db: AsyncSession, campaign_id: str) -> int:
     """How many messages were successfully sent today (UTC)."""
     return await db.scalar(
@@ -178,11 +187,30 @@ async def _enqueue_next(db: AsyncSession, campaign: Campaign, exclude_contact_id
             campaign_id=campaign.id,
             contact_id=nxt.id,
             sort_order=0,
-            run_after=run_after,
+            run_after=_now() + timedelta(seconds=delay),
             attempt=0,
         )
     )
     await db.commit()
+    await _emit(db, campaign, "campaign.progress", {"next_phone": nxt.phone, "status": "queued"})
+
+
+async def _requeue_after(db: AsyncSession, campaign: Campaign, contact: CampaignContact,
+                         delay_seconds: int, attempt: int) -> None:
+    contact.status = "retrying"
+    db.add(
+        CampaignQueue(
+            id=_uuid(),
+            campaign_id=campaign.id,
+            contact_id=contact.id,
+            sort_order=0,
+            run_after=_now() + timedelta(seconds=delay_seconds),
+            attempt=attempt,
+        )
+    )
+    await db.commit()
+    await _emit(db, campaign, "campaign.progress",
+                {"phone": contact.phone, "status": "retrying", "attempt": attempt})
 
 
 async def _requeue_after(db: AsyncSession, campaign: Campaign, contact: CampaignContact,
@@ -213,12 +241,13 @@ async def _maybe_complete_campaign(db: AsyncSession, campaign: Campaign) -> None
         campaign.status = "completed"
         campaign.completed_at = _now()
         await db.commit()
+        await _emit(db, campaign, "campaign.completed", {"status": "completed"})
 
 
 # ---------------------------------------------------------------- sending
 async def send_campaign_message(db: AsyncSession, campaign: Campaign,
                                 contact: CampaignContact) -> bool:
-    """Send a single message to one contact. Returns True on success (sent/delivered/read)."""
+    """Send a single message (text or media) to one contact."""
     phone = contact.phone
     wa_client = await _build_wa_client(db, campaign.user_id)
     if wa_client is None:
@@ -229,23 +258,57 @@ async def send_campaign_message(db: AsyncSession, campaign: Campaign,
         await _record_message(db, campaign, contact, "text", campaign.message_text or "", "failed",
                               error="WhatsApp integration not configured")
         await db.commit()
+        await _emit(db, campaign, "campaign.contact_status",
+                    {"phone": phone, "status": "failed", "reason": "WhatsApp integration not configured"})
         await _enqueue_next(db, campaign, exclude_contact_id=contact.id)
         return True  # processed (no retry possible without credentials)
 
     try:
         await _typing_sleep(campaign)
         text = render_template(campaign.message_text or "", _contact_dict(contact))
-        wa_id = await wa_client.send_text(phone, text)
+
+        meta_media_id = None
+        mime_type = None
+        file_name = None
+        media_type = None
+        caption = None
+        if campaign.media_id:
+            meta_media_id, mime_type, file_name = await _resolve_meta(db, campaign, wa_client, contact)
+            if meta_media_id:
+                from ..services.media import detect_media_type
+
+                media_type = detect_media_type(file_name or "", mime_type or "")
+                caption = text if text else None
+
+        if media_type == "image" and meta_media_id:
+            wa_id = await wa_client.send_image(phone, meta_media_id, caption)
+        elif media_type == "video" and meta_media_id:
+            wa_id = await wa_client.send_video(phone, meta_media_id, caption)
+        elif media_type == "audio" and meta_media_id:
+            wa_id = await wa_client.send_audio(phone, meta_media_id)
+        elif media_type == "document" and meta_media_id:
+            wa_id = await wa_client.send_document(phone, meta_media_id, caption, file_name)
+        else:
+            wa_id = await wa_client.send_text(phone, text)
+
         contact.status = "sent"
         contact.whatsapp_message_id = wa_id or contact.whatsapp_message_id
         contact.processed_at = _now()
         contact.error_reason = None
         campaign.sent_count = (campaign.sent_count or 0) + 1
         await _log(db, campaign.id, contact.id, phone, "sent")
-        await _record_message(db, campaign, contact, "text", text, "sent",
+        await _record_message(db, campaign, contact,
+                              media_type or "text", text, "sent",
                               wa_id=wa_id, sent_at=_now())
         await db.commit()
         await wa_client.aclose()
+        await _emit(db, campaign, "campaign.contact_status",
+                    {"phone": phone, "status": "sent", "wa_id": wa_id})
+        # auto-tag + note the CRM contact (best-effort)
+        try:
+            await tag_contact_after_send(db, campaign, contact)
+        except Exception:  # noqa: BLE001
+            logger.exception("Failed to tag contact after send")
         await _enqueue_next(db, campaign, exclude_contact_id=contact.id)
         return True
     except WhatsAppError as exc:
@@ -264,6 +327,19 @@ async def send_campaign_message(db: AsyncSession, campaign: Campaign,
         return await _handle_failure(db, campaign, contact, exc)
 
 
+async def _resolve_meta(db, campaign, wa_client, contact):
+    """Download the stored campaign attachment and upload it to Meta (once)."""
+    from ..core.storage import download_file
+
+    media = await db.get(MediaFile, campaign.media_id)
+    if media is None or media.user_id != campaign.user_id:
+        return None, None, None
+    raw = await download_file(media.storage_path)
+    meta_media_id = await wa_client.upload_media(raw, media.mime_type, media.file_name)
+    return meta_media_id, media.mime_type, media.file_name
+
+
+
 async def _handle_failure(db: AsyncSession, campaign: Campaign, contact: CampaignContact,
                           exc: Exception) -> bool:
     contact.retry_count = (contact.retry_count or 0) + 1
@@ -276,6 +352,8 @@ async def _handle_failure(db: AsyncSession, campaign: Campaign, contact: Campaig
                               error=reason)
         await db.commit()
         await _requeue_after(db, campaign, contact, campaign.retry_delay_seconds or 120, contact.retry_count)
+        await _emit(db, campaign, "campaign.contact_status",
+                    {"phone": contact.phone, "status": "retrying", "attempt": contact.retry_count})
         return True
     contact.status = "failed"
     contact.processed_at = _now()
@@ -285,6 +363,8 @@ async def _handle_failure(db: AsyncSession, campaign: Campaign, contact: Campaig
     await _record_message(db, campaign, contact, "text", campaign.message_text or "", "failed",
                           error=reason)
     await db.commit()
+    await _emit(db, campaign, "campaign.contact_status",
+                {"phone": contact.phone, "status": "failed", "reason": reason})
     await _enqueue_next(db, campaign, exclude_contact_id=contact.id)
     return True
 
@@ -349,6 +429,8 @@ async def tick_once(db: AsyncSession) -> int:
                 contact.status = "skipped"
                 campaign.skip_count = (campaign.skip_count or 0) + 1
                 await _log(db, campaign.id, contact.id, contact.phone, "skipped", "Blacklisted")
+                await _emit(db, campaign, "campaign.contact_status",
+                            {"phone": contact.phone, "status": "skipped", "reason": "Blacklisted"})
                 await db.delete(item)
                 await db.commit()
                 await _enqueue_next(db, campaign, exclude_contact_id=contact.id)
@@ -359,6 +441,8 @@ async def tick_once(db: AsyncSession) -> int:
                 contact.status = "skipped"
                 campaign.skip_count = (campaign.skip_count or 0) + 1
                 await _log(db, campaign.id, contact.id, contact.phone, "skipped", "Already sent")
+                await _emit(db, campaign, "campaign.contact_status",
+                            {"phone": contact.phone, "status": "skipped", "reason": "Already sent"})
                 await db.delete(item)
                 await db.commit()
                 await _enqueue_next(db, campaign, exclude_contact_id=contact.id)
