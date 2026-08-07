@@ -7,6 +7,7 @@ from fastapi import HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from ..core.storage import signed_url
 from ..core.websocket_manager import manager
 from ..models.conversation import Conversation
 from ..models.contact import Contact
@@ -97,6 +98,11 @@ async def message_to_out(db: AsyncSession, message: Message) -> dict:
     """Serialize a message to a plain dict (avoids lazy-load in async contexts)."""
     media = None
     if message.media:
+        url = None
+        try:
+            url = await signed_url(message.media.storage_path)
+        except Exception:  # noqa: BLE001 - storage may be unconfigured locally
+            url = None
         media = {
             "id": message.media.id,
             "file_name": message.media.file_name,
@@ -105,7 +111,7 @@ async def message_to_out(db: AsyncSession, message: Message) -> dict:
             "media_type": message.media.media_type,
             "storage_path": message.media.storage_path,
             "created_at": message.media.created_at,
-            "url": None,
+            "url": url,
         }
     return {
         "id": message.id,

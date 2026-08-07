@@ -57,7 +57,7 @@ async def upload_file(*, path: str, file_bytes: bytes, mime_type: str) -> str:
             get_client().storage.from_(settings.supabase_bucket).upload(
                 path=path,
                 file=file_bytes,
-                file_options={"content-type": mime_type, "upsert": True},
+                file_options={"content-type": mime_type, "x-upsert": "true"},
             )
 
         await anyio.to_thread.run_sync(_do)

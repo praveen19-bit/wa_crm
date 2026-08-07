@@ -355,9 +355,9 @@
         ? (media.url.startsWith("/") ? window.CRM.api.base + media.url : media.url)
         : null;
 
-      if (m.msg_type === "image" && url) {
+      if ((m.msg_type === "image" || m.msg_type === "sticker") && url) {
         const img = document.createElement("img");
-        img.className = "msg-media";
+        img.className = "msg-media" + (m.msg_type === "sticker" ? " sticker" : "");
         img.src = url;
         img.loading = "lazy";
         img.addEventListener("click", () => window.open(url, "_blank"));

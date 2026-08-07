@@ -5,6 +5,7 @@ upserts contacts, stores media, persists messages, broadcasts over WS and
 optionally triggers auto-replies.
 """
 import logging
+import mimetypes
 from typing import Optional
 
 from sqlalchemy import select
@@ -41,6 +42,12 @@ async def find_user_by_phone_number(db: AsyncSession, phone_number_id: str) -> O
 
 def normalize_phone(raw: str) -> str:
     return "".join(ch for ch in (raw or "") if ch.isdigit())
+
+
+def _media_extension(mime_type: str, fallback: str) -> str:
+    ext = mimetypes.guess_extension(mime_type or "") or ""
+    ext = ext.lstrip(".") if ext else ""
+    return ext or fallback
 
 
 async def _upsert_contact(
@@ -120,16 +127,18 @@ async def _process_incoming_message(
 
     if msg_type == "text":
         text = (message_payload.get("text") or {}).get("body")
-    elif msg_type == "image":
-        data = message_payload.get("image") or {}
+    elif msg_type in ("image", "sticker"):
+        data = message_payload.get(msg_type) or {}
         text = data.get("caption")
-        mime_type = data.get("mime_type", "image/jpeg")
-        file_name = data.get("mime_type", "image/jpeg").split("/")[-1] + "_" + msg_id[-8:] + ".jpg"
+        mime_type = data.get(
+            "mime_type", "image/webp" if msg_type == "sticker" else "image/jpeg"
+        )
+        file_name = f"{msg_type}_{msg_id[-8:]}.{_media_extension(mime_type, 'webp' if msg_type == 'sticker' else 'jpg')}"
     elif msg_type in ("document", "video", "audio"):
         data = message_payload.get(msg_type) or {}
         text = data.get("caption")
         mime_type = data.get("mime_type", "application/octet-stream")
-        file_name = data.get("filename") or f"{msg_type}_{msg_id[-8:]}"
+        file_name = data.get("filename") or f"{msg_type}_{msg_id[-8:]}.{_media_extension(mime_type, 'bin')}"
 
     if msg_type != "text":
         media_meta_id = (message_payload.get(msg_type) or {}).get("id")

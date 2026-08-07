@@ -596,6 +596,13 @@ select {
   border: 1px solid var(--border);
 }
 
+.msg-media.sticker {
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: contain;
+  border: none;
+}
+
 .msg-media.doc {
   display: flex;
   align-items: center;
