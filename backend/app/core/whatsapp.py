@@ -72,7 +72,7 @@ class WhatsAppClient:
             files=files,
             data={"messaging_product": "whatsapp", "type": mime_type},
         )
-        data = self._raise_if_error(resp, 201)
+        data = self._raise_if_error(resp, (200, 201))
         media_id = data.get("id")
         if not media_id:
             raise WhatsAppError("Meta did not return a media id", resp.status_code)
@@ -198,7 +198,7 @@ class WhatsAppClient:
                 msg = err.get("message", resp.text) if isinstance(err, dict) else resp.text
             else:
                 msg = resp.text
-            raise WhatsAppError(str(msg), resp.status_code, fb_code)
+            raise WhatsAppError(f"{msg} (HTTP {resp.status_code})", resp.status_code, fb_code)
         return data if isinstance(data, dict) else {}
 
 
