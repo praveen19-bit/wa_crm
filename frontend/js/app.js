@@ -39,6 +39,7 @@
       if (name === "contacts" && window.CRM.contacts) window.CRM.contacts.refresh();
       if (name === "analytics" && window.CRM.analytics) window.CRM.analytics.refresh();
       if (name === "settings" && window.CRM.settings) window.CRM.settings.refresh();
+      if (name === "campaigns" && window.CRM.campaigns) window.CRM.campaigns.refresh();
       if (name === "inbox" && window.CRM.inbox) window.CRM.inbox.refreshList();
     }
     window.CRM.showView = showView;

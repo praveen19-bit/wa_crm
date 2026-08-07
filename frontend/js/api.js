@@ -181,6 +181,48 @@
     /* ---------------- analytics ---------------- */
     analytics: (days) => request("/api/analytics?days=" + days),
 
+    /* ---------------- campaigns ---------------- */
+    listCampaigns: (params = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return request("/api/campaigns?" + qs);
+    },
+    getCampaign: (id) => request("/api/campaigns/" + id),
+    createCampaign: (data) => request("/api/campaigns", { method: "POST", body: data }),
+    updateCampaign: (id, data) => request("/api/campaigns/" + id, { method: "PATCH", body: data }),
+    deleteCampaign: (id) => request("/api/campaigns/" + id, { method: "DELETE" }),
+    startCampaign: (id) => request("/api/campaigns/" + id + "/start", { method: "POST" }),
+    pauseCampaign: (id) => request("/api/campaigns/" + id + "/pause", { method: "POST" }),
+    resumeCampaign: (id) => request("/api/campaigns/" + id + "/resume", { method: "POST" }),
+    stopCampaign: (id) => request("/api/campaigns/" + id + "/stop", { method: "POST" }),
+    uploadLeads: (id, file, columnMap) => {
+      const fd = new FormData();
+      fd.append("file", file);
+      if (columnMap) fd.append("column_map", JSON.stringify(columnMap));
+      return request("/api/campaigns/" + id + "/upload", { method: "POST", body: fd });
+    },
+    seedLeads: (id, rows) => request("/api/campaigns/" + id + "/seed", { method: "POST", body: rows }),
+    campaignProgress: (id) => request("/api/campaigns/" + id + "/progress"),
+    campaignContacts: (id, params = {}) => {
+      const qs = new URLSearchParams(params).toString();
+      return request("/api/campaigns/" + id + "/contacts?" + qs);
+    },
+    campaignLogs: (id) => request("/api/campaigns/" + id + "/logs"),
+    campaignAnalytics: (id) => request("/api/campaigns/" + id + "/analytics"),
+    exportCampaign: (id, fmt = "csv") => {
+      const url = API_BASE + "/api/campaigns/" + id + "/export?fmt=" + encodeURIComponent(fmt);
+      const a = document.createElement("a");
+      a.href = url + "&token=" + encodeURIComponent(getToken() || "");
+      a.download = "campaign-" + id + "." + fmt;
+      a.click();
+    },
+    listTemplates: () => request("/api/campaigns/templates"),
+    createTemplate: (data) => request("/api/campaigns/templates", { method: "POST", body: data }),
+    toggleTemplate: (id) => request("/api/campaigns/templates/" + id + "/favorite", { method: "POST" }),
+    deleteTemplate: (id) => request("/api/campaigns/templates/" + id, { method: "DELETE" }),
+    listBlacklist: () => request("/api/campaigns/blacklist"),
+    addBlacklist: (phone, reason) => request("/api/campaigns/blacklist?phone=" + encodeURIComponent(phone) + (reason ? "&reason=" + encodeURIComponent(reason) : ""), { method: "POST" }),
+    removeBlacklist: (id) => request("/api/campaigns/blacklist/" + id, { method: "DELETE" }),
+
     /* ---------------- settings ---------------- */
     getSettings: () => request("/api/settings"),
     updateSettings: (data) => request("/api/settings", { method: "PUT", body: data }),

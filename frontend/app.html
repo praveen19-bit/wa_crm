@@ -24,6 +24,9 @@
         <button class="nav-item" data-view="contacts">
           <span class="nav-ico">👥</span><span class="nav-label">Contacts</span>
         </button>
+        <button class="nav-item" data-view="campaigns">
+          <span class="nav-ico">🚀</span><span class="nav-label">Campaigns</span>
+        </button>
         <button class="nav-item" data-view="analytics">
           <span class="nav-ico">📊</span><span class="nav-label">Analytics</span>
         </button>
@@ -161,32 +164,38 @@
         </div>
       </section>
 
-      <!-- ============ ANALYTICS ============ -->
-      <section id="view-analytics" class="view">
-        <div class="page-head">
-          <div>
-            <h1>Analytics</h1>
-            <p class="page-sub">Performance of your outreach</p>
-          </div>
-          <select id="analytics-range" class="select-input">
-            <option value="7">Last 7 days</option>
-            <option value="30" selected>Last 30 days</option>
-            <option value="90">Last 90 days</option>
-          </select>
-        </div>
+       <!-- ============ ANALYTICS ============ -->
+       <section id="view-analytics" class="view">
+         <div class="page-head">
+           <div>
+             <h1>Analytics</h1>
+             <p class="page-sub">Performance of your outreach</p>
+           </div>
+           <select id="analytics-range" class="select-input">
+             <option value="7">Last 7 days</option>
+             <option value="30" selected>Last 30 days</option>
+             <option value="90">Last 90 days</option>
+           </select>
+         </div>
 
-        <div class="stats-grid" id="analytics-cards"></div>
-        <div class="chart-row">
-          <div class="chart-card glass">
-            <h3>Daily messages</h3>
-            <canvas id="chart-daily"></canvas>
-          </div>
-          <div class="chart-card glass">
-            <h3>Message mix</h3>
-            <canvas id="chart-mix"></canvas>
-          </div>
-        </div>
-      </section>
+         <div class="stats-grid" id="analytics-cards"></div>
+         <div class="chart-row">
+           <div class="chart-card glass">
+             <h3>Daily messages</h3>
+             <canvas id="chart-daily"></canvas>
+           </div>
+           <div class="chart-card glass">
+             <h3>Message mix</h3>
+             <canvas id="chart-mix"></canvas>
+           </div>
+         </div>
+       </section>
+
+       <!-- ============ CAMPAIGNS ============ -->
+       <section id="view-campaigns" class="view">
+         <campaigns-app></campaigns-app>
+       </section>
+
 
       <!-- ============ SETTINGS ============ -->
       <section id="view-settings" class="view">
@@ -293,5 +302,6 @@
   <script src="js/contacts.js"></script>
   <script src="js/analytics.js"></script>
   <script src="js/settings.js"></script>
+  <script src="js/campaigns.js"></script>
 </body>
 </html>
