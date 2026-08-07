@@ -195,20 +195,20 @@ def parse_leads(
         if not phone or not is_valid_phone(phone):
             invalid += 1
             record["phone"] = record["phone"] or ""
-            record["_invalid"] = True
-            record["_reason"] = "Invalid phone number"
+            record["status"] = "invalid"
+            record["reason"] = "Invalid phone number"
             rows.append(record)
             continue
         record["phone"] = phone
         record.pop("extra", None)  # keep extra only if present; harmless
         if phone in seen_phones:
             duplicate += 1
-            record["_duplicate"] = True
-            record["_reason"] = "Duplicate phone number"
+            record["status"] = "duplicate"
+            record["reason"] = "Duplicate phone number"
             rows.append(record)
             continue
-        record["_invalid"] = False
-        record["_duplicate"] = False
+        record["status"] = "valid"
+        record["reason"] = None
         seen_phones.add(phone)
         rows.append(record)
 
