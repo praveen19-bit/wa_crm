@@ -36,9 +36,6 @@
 
   <!-- live run -->
   <section id="campaigns-live" class="camp-live" style="display:none;">
-    <div class="page-actions">
-      <button class="btn btn-ghost" id="btn-back-dashboard">← Dashboard</button>
-    </div>
     <div class="camp-live-head">
       <h2 id="camp-live-title">Campaign</h2>
       <span class="camp-live-status camp-status camp-status-draft" id="camp-live-status">DRAFT</span>
@@ -71,8 +68,8 @@
 
   <!-- wizard -->
   <section id="campaigns-wizard" class="camp-wizard" style="display:none;">
-    <div class="page-actions"><button class="btn btn-ghost" id="btn-cancel-wizard">← Back</button></div>
-    <div class="wizard-grid">
+      <div class="page-actions"><button class="btn btn-ghost" id="btn-wiz-back">← Back</button></div>
+      <div class="wizard-grid">
       <div class="wizard-col">
         <h2>1. Campaign settings</h2>
         <div class="field"><label for="wiz-name">Campaign name</label><input id="wiz-name" class="input" placeholder="Q3 launch outreach" /></div>
@@ -366,11 +363,16 @@
 
   function wire() {
     q("btn-new-campaign").addEventListener("click", () => { q("campaigns-dashboard").style.display="none"; q("campaigns-wizard").style.display="block"; loadWizardDeps(); });
-    q("btn-cancel-wizard").addEventListener("click", hideWizard);
-    q("btn-back-dashboard").addEventListener("click", () => { state.current = null; hideWizard(); q("campaigns-live").style.display="none"; q("campaigns-dashboard").style.display="block"; });
-    q("btn-create-campaign").addEventListener("click", createCampaign);
-    q("btn-seed").addEventListener("click", confirmSeed);
-    q("btn-wiz-save-template").addEventListener("click", saveTemplate);
+    const cancelWiz = q("btn-cancel-wizard") || q("btn-wiz-back");
+    if (cancelWiz) cancelWiz.addEventListener("click", hideWizard);
+    const backDash = q("btn-back-dashboard");
+    if (backDash) backDash.addEventListener("click", () => { state.current = null; hideWizard(); const live = q("campaigns-live"); if (live) live.style.display = "none"; const dash = q("campaigns-dashboard"); if (dash) dash.style.display = "block"; });
+    const createBtn = q("btn-create-campaign");
+    if (createBtn) createBtn.addEventListener("click", createCampaign);
+    const seedBtn = q("btn-seed");
+    if (seedBtn) seedBtn.addEventListener("click", confirmSeed);
+    const tplSave = q("btn-wiz-save-template");
+    if (tplSave) tplSave.addEventListener("click", saveTemplate);
   }
 
   // expose helpers
