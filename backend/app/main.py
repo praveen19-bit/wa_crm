@@ -25,9 +25,14 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    if settings.environment != "production":
+    # create_all is idempotent (checkfirst=True): it only adds tables that don't
+    # exist yet and never touches existing ones. Safe to run in production so new
+    # tables ship without a manual schema.sql re-run.
+    try:
         await init_db()
-        logger.info("Database initialized (non-production mode)")
+        logger.info("Database initialized (schema up to date)")
+    except Exception as exc:  # noqa: BLE001
+        logger.error("Database initialization failed: %s", exc)
     logger.info("%s started in %s environment", settings.app_name, settings.environment)
     worker_task = asyncio.create_task(queue_worker.run_worker())
     yield
