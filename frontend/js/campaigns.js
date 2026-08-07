@@ -376,5 +376,13 @@
   // expose helpers
   window.CRM.campaigns = { refresh, showWizard };
 
-  window.CRM.campaigns.init = () => { render(); refresh(); };
+  // render immediately — these scripts load at end of body, after <campaigns-app> exists
+  function init() { render(); refresh(); }
+  window.CRM.campaigns.init = init;
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
+
